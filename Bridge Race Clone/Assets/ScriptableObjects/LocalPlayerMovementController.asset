@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnSpeed: 6
   Speed: 6
-  LerpValue: 5
+  LerpValue: 4

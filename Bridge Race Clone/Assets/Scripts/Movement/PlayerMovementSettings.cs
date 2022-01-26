@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BridgeRace.PlayerMovement
 {
-    [CreateAssetMenu(menuName ="BridgeRace/Movement/PlayerMovement")]
+    [CreateAssetMenu(menuName ="BridgeRace/Movement/PlayerMovementSettings")]
     public class PlayerMovementSettings : ScriptableObject
     {
         public float TurnSpeed;
