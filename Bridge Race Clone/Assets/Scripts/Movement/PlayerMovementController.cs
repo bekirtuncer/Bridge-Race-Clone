@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace BridgeRace.PlayerMovement
 {
@@ -9,6 +10,10 @@ namespace BridgeRace.PlayerMovement
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
         [SerializeField] private Camera _camera;
         [SerializeField] private Animator _animator;
+
+        [SerializeField] private Transform _gathersTopObject;
+        [SerializeField] private GameObject _prevObject;
+        [SerializeField] private List<GameObject> _cubes = new List<GameObject>();
 
         public LayerMask Layer;
 
@@ -49,6 +54,28 @@ namespace BridgeRace.PlayerMovement
                 {
                     _animator.SetBool("Running", true);
                 }
+            }
+        }
+
+        private void OnTriggerEnter(Collider target)
+        {
+            if (target.gameObject.tag.StartsWith(transform.GetChild(1).
+                GetComponent<SkinnedMeshRenderer>().material.name.Substring(0, 1)))
+            {
+                target.transform.SetParent(_gathersTopObject);
+                Vector3 position = _prevObject.transform.localPosition;
+
+                position.y += 0.22f;
+                position.z = 0;
+                position.x = 0;
+
+                target.transform.localRotation = new Quaternion(0, 0.7071068f, 0, 0.7071068f);
+
+                target.transform.DOLocalMove(position, 0.2f);
+                _prevObject = target.gameObject;
+                _cubes.Add(target.gameObject);
+
+                target.tag = "Untagged";
             }
         }
     }    
