@@ -770,13 +770,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetsParent: {fileID: 0}
-  _targets: []
   _gathersTopObject: {fileID: 5208288571431893155}
   _prevObject: {fileID: 527715412}
   _cubes: []
+  _ropes: []
   _characterAISettings: {fileID: 11400000, guid: ffaf7dc50853cad4fa0d2e33543e399d, type: 2}
   _animator: {fileID: 2684350606028879847}
   _agent: {fileID: 701546010734019510}
+  _targets: []
+  _characterEnum: 2
 --- !u!1 &2684350606019511371
 GameObject:
   m_ObjectHideFlags: 0
