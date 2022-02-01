@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0848ba33ee2cb48a0eede0a064007e, type: 3}
   m_Name: CharacterAISettings
   m_EditorClassIdentifier: 
-  Radius: 2
+  Radius: 100
+  TargetsParent: {fileID: 5294849734410300033, guid: ef3e2b78f05d6944bbde7b2061dfe106, type: 3}

@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 4554298406743477485}
   - component: {fileID: 5055978690557807298}
   - component: {fileID: -2466718047790870144}
+  - component: {fileID: -1611265317337155757}
   m_Layer: 3
   m_Name: Stickman_heads_sphere 1
   m_TagString: Untagged
@@ -310,6 +311,18 @@ MonoBehaviour:
   Layer:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &-1611265317337155757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188551986444206380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29315102cb8e62845811eeb1d8428b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1188551986444206382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,14 +1197,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025249699716520712}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.68, z: -0.16}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.68, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4371820309440887056}
   m_Father: {fileID: 1188551986443722062}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &5603777878742717793
 GameObject:
   m_ObjectHideFlags: 0
