@@ -8,5 +8,6 @@ namespace BridgeRace.AI
     public class CharacterAISettings : ScriptableObject
     {
         public float Radius;
+        public GameObject TargetsParent;
     }    
 }

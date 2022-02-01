@@ -10,7 +10,7 @@ namespace BridgeRace.AI
     public enum Character { one=1, two=2 }
     public class CharacterAIController : MonoBehaviour
     {
-        [SerializeField] private GameObject _targetsParent;
+        //[SerializeField] private GameObject _targetsParent;
         [SerializeField] private Transform _gathersTopObject;
         [SerializeField] private GameObject _prevObject;
         [SerializeField] private List<GameObject> _cubes = new List<GameObject>();
@@ -28,9 +28,9 @@ namespace BridgeRace.AI
 
         private void Start()
         {
-            for (int i = 0; i < _targetsParent.transform.childCount; i++)
+            for (int i = 0; i < _characterAISettings.TargetsParent.transform.childCount; i++)
             {
-                _targets.Add(_targetsParent.transform.GetChild(i).gameObject);
+                _targets.Add(_characterAISettings.TargetsParent.transform.GetChild(i).gameObject);
             }
         }
 
