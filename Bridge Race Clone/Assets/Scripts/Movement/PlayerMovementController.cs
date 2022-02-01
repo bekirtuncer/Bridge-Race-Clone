@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using BridgeRace.ObstaclesController;
 
 namespace BridgeRace.PlayerMovement
 {
@@ -76,6 +77,8 @@ namespace BridgeRace.PlayerMovement
                 _cubes.Add(target.gameObject);
 
                 target.tag = "Untagged";
+
+                ObstacleSpawner.Instance.SpawnObstacle(0);
             }
         }
     }    
