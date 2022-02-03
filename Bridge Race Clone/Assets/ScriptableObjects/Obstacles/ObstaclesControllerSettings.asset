@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae164dc9fd414af45a63264130de17ae, type: 3}
   m_Name: ObstaclesControllerSettings
   m_EditorClassIdentifier: 
-  MinX: -8
-  MaxX: 8
-  MinZ: 5
-  MaxZ: 18
+  MinX: f8fffffffaffffff
+  MaxX: 0800000006000000
+  MinZ: 050000002e000000
+  MaxZ: 1200000037000000

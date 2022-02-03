@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ca5e7f18624eb4c8f54317cc9441af, type: 3}
   m_Name: CameraControllerSettings
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 14, z: -7}
+  Offset: {x: 0, y: 20, z: -10}
   LerpValue: 2

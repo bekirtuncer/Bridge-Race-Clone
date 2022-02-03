@@ -7,7 +7,6 @@ namespace BridgeRace.AI
     [CreateAssetMenu(menuName = "BridgeRace/AI/CharacterAISettings")]
     public class CharacterAISettings : ScriptableObject
     {
-        public float Radius;
-        public GameObject TargetsParent;
+        public float Radius;        
     }    
 }

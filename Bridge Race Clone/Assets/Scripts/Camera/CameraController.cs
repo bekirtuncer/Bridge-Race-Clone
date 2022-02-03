@@ -17,7 +17,7 @@ namespace BridgeRace
 
         private void LateUpdate()
         {
-            Vector3 targetPosition = new Vector3(0, 0, Target.position.z) + _cameraControllerSettings.Offset;
+            Vector3 targetPosition = new Vector3(Target.position.x, 0, Target.position.z) + _cameraControllerSettings.Offset;
             transform.position = Vector3.Lerp(transform.position, targetPosition, _cameraControllerSettings.LerpValue);
         }
     }    
