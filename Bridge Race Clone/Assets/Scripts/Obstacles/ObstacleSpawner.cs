@@ -16,34 +16,39 @@ namespace BridgeRace.ObstaclesController
 
         public LayerMask LayerMask;
 
+        public bool isWinnerPresent = false;
+        public bool isSecondTaken = false;
+        public bool isThirdTaken = false;
+
         private void Awake()
         {
             if (Instance == null)
             {
                 Instance = this;
             }
-        }
+        }        
 
-        public void SpawnObstacle(int number, CharacterAIController characterAI=null)
+        public void SpawnObstacle(int number, CharacterAIController characterAI=null, int requestedStage = 0)
         {
             if (number==0)
             {
-                Spawn(_redObstacles, _redObsParent, characterAI);
+                Spawn(_redObstacles, _redObsParent, characterAI, requestedStage);
             }
             if (number==1)
             {
-                Spawn(_greenObstacles, _greenObsParent, characterAI);
+                Spawn(_greenObstacles, _greenObsParent, characterAI, requestedStage);
             }
             if (number == 2)
             {
-                Spawn(_orangeObstacles, _orangeObsParent, characterAI);
+                Spawn(_orangeObstacles, _orangeObsParent, characterAI, requestedStage);
             }
         }
-        private void Spawn(GameObject gameObject, Transform parent, CharacterAIController characterAI=null)
+        private void Spawn(GameObject gameObject, Transform parent, CharacterAIController characterAI=null, int requestedStage = 0)
         {
             GameObject obs = Instantiate(gameObject);
+            obs.transform.parent = parent;
 
-            Vector3 targetPosition = RandomizePosition();
+            Vector3 targetPosition = RandomizePosition(requestedStage);
 
             obs.SetActive(false);
 
@@ -51,7 +56,7 @@ namespace BridgeRace.ObstaclesController
 
             while (colliders.Length != 0)
             {
-                targetPosition = RandomizePosition();
+                targetPosition = RandomizePosition(requestedStage);
                 colliders = Physics.OverlapSphere(targetPosition, 1, LayerMask);
             }
             obs.SetActive(true);
@@ -61,10 +66,10 @@ namespace BridgeRace.ObstaclesController
                 characterAI._targets.Add(obs);
             }
         }
-        private Vector3 RandomizePosition()
-        {
-            return new Vector3(Random.Range(_obstacleSpawnerSettings.MinX, _obstacleSpawnerSettings.MaxX),
-                _redObstacles.transform.position.y, Random.Range(_obstacleSpawnerSettings.MinZ, _obstacleSpawnerSettings.MaxZ));
+        private Vector3 RandomizePosition(int requestedStage)
+        {            
+            return new Vector3(Random.Range(_obstacleSpawnerSettings.MinX[requestedStage], _obstacleSpawnerSettings.MaxX[requestedStage]),
+                _redObstacles.transform.position.y, Random.Range(_obstacleSpawnerSettings.MinZ[requestedStage], _obstacleSpawnerSettings.MaxZ[requestedStage]));
         }
     }    
 }

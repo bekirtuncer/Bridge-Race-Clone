@@ -7,6 +7,12 @@ TagManager:
   - Green
   - Orange
   - Red
+  - Align
+  - AlignG
+  - AlignO
+  - AlignR
+  - Dumpster
+  - StageInitiate
   layers:
   - Default
   - TransparentFX
@@ -15,12 +21,12 @@ TagManager:
   - Water
   - UI
   - Obstacles
-  - PlayerCollisionBlocker
+  - 
   - OrangeEnemy
   - GreenEnemy
-  - 
-  - 
-  - 
+  - GreenOnly
+  - OrangeOnly
+  - RedOnly
   - 
   - 
   - 

@@ -7,6 +7,6 @@ namespace BridgeRace.ObstaclesController
     [CreateAssetMenu(menuName = "BridgeRace/Obstacles/ObstaclesControllerSettings")]
     public class ObstacleSpawnerSettings : ScriptableObject
     {
-        public int MinX, MaxX, MinZ, MaxZ;
+        public List<int> MinX, MaxX, MinZ, MaxZ;
     }
 }
